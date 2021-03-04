@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4aa985bc-4c65-4194-b973-7755f4474b3f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     schedual.`id` AS schedual_id,
+     schedual.`emp_name` AS schedual_emp_name,
+     schedual.`bus_no` AS schedual_bus_no,
+     schedual.`date` AS schedual_date,
+     schedual.`route_no` AS schedual_route_no,
+     schedual.`amount` AS schedual_amount
+FROM
+     `schedual` schedual]]>
+	</queryString>
+	<field name="schedual_id" class="java.lang.Integer"/>
+	<field name="schedual_emp_name" class="java.lang.String"/>
+	<field name="schedual_bus_no" class="java.lang.String"/>
+	<field name="schedual_date" class="java.lang.String"/>
+	<field name="schedual_route_no" class="java.lang.String"/>
+	<field name="schedual_amount" class="java.lang.Float"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="10" width="154" height="30" uuid="5333df06-4426-40d0-a693-60a4fb8aa487"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Scheudle Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="3" width="555" height="1" uuid="493f413c-89be-48f1-8cba-e7cea6553bc9"/>
+			</line>
+			<line>
+				<reportElement x="0" y="52" width="555" height="1" uuid="ab6841a1-c791-47f2-b3e1-6d7b2b2361be"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="9" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="42" width="555" height="1" uuid="397a1141-f15f-4cef-80e8-116136ac6fe0"/>
+			</line>
+			<staticText>
+				<reportElement x="11" y="2" width="24" height="20" uuid="7b838fa3-5724-454a-b938-1f3f855477f5"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="2" width="76" height="40" uuid="f9fe0cc2-371c-41fb-a177-22262322abf8"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="2" width="77" height="20" uuid="7dee4ae3-6627-467a-a428-010a8994ae73"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bus NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="2" width="64" height="20" uuid="c24c10d7-4653-4076-9f4c-67932baf4145"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="2" width="71" height="20" uuid="0f550989-6709-4621-8139-bb69626d8d59"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Route NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="453" y="2" width="82" height="20" uuid="0bd85123-cc59-4473-8677-69fe6e9a0951"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="51" width="555" height="1" uuid="86b448b4-92b2-4968-9463-3eecb0096893"/>
+			</line>
+			<textField>
+				<reportElement x="11" y="17" width="24" height="20" uuid="67e72703-60fe-49b6-921a-0dc2c9dfc32f"/>
+				<textFieldExpression><![CDATA[$F{schedual_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="17" width="61" height="20" uuid="90f0a7f7-1ab7-49dd-b333-d1cc28214c69"/>
+				<textFieldExpression><![CDATA[$F{schedual_emp_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="17" width="83" height="20" uuid="b86edcc1-9cca-4828-9ac6-a29fcb0f90e3"/>
+				<textFieldExpression><![CDATA[$F{schedual_bus_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="17" width="88" height="20" uuid="38cc1c84-2306-42a9-aaf0-8d9c46b5e083"/>
+				<textFieldExpression><![CDATA[$F{schedual_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="17" width="71" height="20" uuid="23e7e29c-0e4c-415b-aa26-102d845367a2"/>
+				<textFieldExpression><![CDATA[$F{schedual_route_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="17" width="82" height="20" uuid="eab6717c-6fac-4892-b2a5-933fd586851b"/>
+				<textFieldExpression><![CDATA[$F{schedual_amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="4" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="8" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="47c4e0fb-c6b7-48b1-a1fb-8e8bc80e2f27">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     route_info.`id` AS route_info_id,
+     route_info.`route_no` AS route_info_route_no,
+     route_info.`no_of_stop` AS route_info_no_of_stop,
+     route_info.`start` AS route_info_start,
+     route_info.`stop` AS route_info_stop,
+     route_info.`start_time` AS route_info_start_time,
+     route_info.`stop_time` AS route_info_stop_time
+FROM
+     `route_info` route_info]]>
+	</queryString>
+	<field name="route_info_id" class="java.lang.Integer"/>
+	<field name="route_info_route_no" class="java.lang.String"/>
+	<field name="route_info_no_of_stop" class="java.lang.Integer"/>
+	<field name="route_info_start" class="java.lang.String"/>
+	<field name="route_info_stop" class="java.lang.String"/>
+	<field name="route_info_start_time" class="java.lang.String"/>
+	<field name="route_info_stop_time" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="21" width="123" height="28" uuid="143bf795-b5ce-4246-8598-57de0c12bd99"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Route Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="10" width="553" height="1" uuid="bbac80a4-b703-41a1-8fd4-738e93ed3324"/>
+			</line>
+			<line>
+				<reportElement x="0" y="65" width="553" height="1" uuid="51851c7c-a86b-4dbe-a4ae-e1d5ebcc92d3"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="5" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="55" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="50" width="552" height="1" uuid="94974c39-3728-437b-9d46-2c471e98687d"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="29" height="20" uuid="9247dae9-525f-41c6-8701-35b2b8982271"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="73" height="20" uuid="7bb13638-d86c-48ad-ab25-ac52bad9067d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Route NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="2" width="65" height="20" uuid="416c0a08-e10b-4728-9a6e-2857edb9569f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stops NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="2" width="68" height="20" uuid="1540b70b-5dbf-4a8b-9901-353e6f1d0431"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Start]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="2" width="63" height="20" uuid="4a5ce864-0fa3-4e62-99ff-e0fb62556f9f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="2" width="77" height="36" uuid="59a818e8-c095-4fc9-a845-5362908c45db"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Start Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="2" width="72" height="36" uuid="8055571d-692c-4dcc-ab32-c1e3bea932e9"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stop Time]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="59" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="58" width="552" height="1" uuid="d01685df-2e12-47fa-b705-495b0ff159ab"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="18" width="29" height="20" uuid="9a1909a4-aa7f-4468-b7dc-0aabceddbeb3"/>
+				<textFieldExpression><![CDATA[$F{route_info_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="58" y="18" width="62" height="20" uuid="3a3a090b-03ac-4d22-b24e-fb69eb583b17"/>
+				<textFieldExpression><![CDATA[$F{route_info_route_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="18" width="65" height="20" uuid="e52bc7a9-cf91-4583-aa41-84b268a1d1dd"/>
+				<textFieldExpression><![CDATA[$F{route_info_no_of_stop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="226" y="18" width="67" height="20" uuid="40d23214-b321-4cb0-a815-e6e9eeb92013"/>
+				<textFieldExpression><![CDATA[$F{route_info_start}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="18" width="63" height="20" uuid="de7cbbf8-7b9e-4135-ba83-3fd80e2a443e"/>
+				<textFieldExpression><![CDATA[$F{route_info_stop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="21" width="54" height="20" uuid="c65265ab-15ca-4225-8f3a-2b425f078a94"/>
+				<textFieldExpression><![CDATA[$F{route_info_start_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="21" width="72" height="20" uuid="7c83c3d5-3d53-4be4-b3a2-01862f2a5c52"/>
+				<textFieldExpression><![CDATA[$F{route_info_stop_time}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="5" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="33" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cb371bcb-8f2e-4f69-87f1-954cab89deed">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     bus_stop.`id` AS bus_stop_id,
+     bus_stop.`route_no` AS bus_stop_route_no,
+     bus_stop.`stop_no` AS bus_stop_stop_no,
+     bus_stop.`stop_name` AS bus_stop_stop_name,
+     bus_stop.`fare_stage` AS bus_stop_fare_stage
+FROM
+     `bus_stop` bus_stop]]>
+	</queryString>
+	<field name="bus_stop_id" class="java.lang.Integer"/>
+	<field name="bus_stop_route_no" class="java.lang.String"/>
+	<field name="bus_stop_stop_no" class="java.lang.Integer"/>
+	<field name="bus_stop_stop_name" class="java.lang.String"/>
+	<field name="bus_stop_fare_stage" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="222" y="16" width="158" height="24" uuid="15250134-28d2-47f0-82d7-8b4ae748c3b0"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bus Stop Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="4" width="555" height="1" uuid="e3b27f4f-4df7-4d25-b20e-bd29b14033ff"/>
+			</line>
+			<line>
+				<reportElement x="0" y="57" width="555" height="1" uuid="d4f61e22-3896-48f6-a8a9-7d8e80894885"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="11" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="51" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="47" width="555" height="1" uuid="c5b9fba9-861f-428e-86e6-eb335ea9e59d"/>
+			</line>
+			<staticText>
+				<reportElement x="8" y="0" width="40" height="20" uuid="ce55bdc4-5ebe-4ecf-9364-b6d3824e0c46"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="0" width="71" height="20" uuid="9184a789-efcd-4589-b688-b9f4d37a5049"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Route No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="2" width="64" height="20" uuid="5dc07d43-01cb-4b51-a2b6-b451c9f84351"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stop No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="0" width="100" height="20" uuid="63c703bd-993c-40c2-ac92-6aaa93ce8a5b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stop Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="2" width="100" height="20" uuid="b89ffdb4-d0e2-4e38-a81d-913f94b2f7a8"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fare Stage]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="55" width="555" height="1" uuid="e34ad2ae-2c47-4f2e-9a83-96114c1229c6"/>
+			</line>
+			<textField>
+				<reportElement x="7" y="11" width="40" height="20" uuid="9f542d5d-5c46-4927-acdb-41470763dfa5"/>
+				<textFieldExpression><![CDATA[$F{bus_stop_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="11" width="61" height="20" uuid="9fc30b15-b59a-4f32-bc2f-c5a162c58685"/>
+				<textFieldExpression><![CDATA[$F{bus_stop_route_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="11" width="64" height="20" uuid="36ae4e0f-d1e6-4b4c-a8cb-700c6e689665"/>
+				<textFieldExpression><![CDATA[$F{bus_stop_stop_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="298" y="11" width="96" height="20" uuid="852441cf-f146-45ab-91e1-d023dac3b294"/>
+				<textFieldExpression><![CDATA[$F{bus_stop_stop_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="11" width="100" height="20" uuid="75ed08aa-a190-4497-a401-df24720b61c9"/>
+				<textFieldExpression><![CDATA[$F{bus_stop_fare_stage}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="5" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

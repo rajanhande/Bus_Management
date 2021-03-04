@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="198b3910-5a1a-4ddf-8874-81bcefd6b768">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     trip_info.`id` AS trip_info_id,
+     trip_info.`route_no` AS trip_info_route_no,
+     trip_info.`bus_no` AS trip_info_bus_no,
+     trip_info.`start_time` AS trip_info_start_time,
+     trip_info.`stop_time` AS trip_info_stop_time,
+     trip_info.`amount` AS trip_info_amount
+FROM
+     `trip_info` trip_info]]>
+	</queryString>
+	<field name="trip_info_id" class="java.lang.Integer"/>
+	<field name="trip_info_route_no" class="java.lang.String"/>
+	<field name="trip_info_bus_no" class="java.lang.String"/>
+	<field name="trip_info_start_time" class="java.lang.String"/>
+	<field name="trip_info_stop_time" class="java.lang.String"/>
+	<field name="trip_info_amount" class="java.lang.Float"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="18" width="156" height="31" uuid="a4eab682-0e64-4781-89c2-d526304c713a"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trip Info. Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="3" width="555" height="1" uuid="fe26bcdc-b2f7-4487-9881-99657845e840"/>
+			</line>
+			<line>
+				<reportElement x="0" y="57" width="555" height="1" uuid="663771d3-fd41-47ec-9180-b64c3ae1287e"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="4" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="46" width="555" height="1" uuid="afb5e596-9f93-49d1-a71e-ff4a798bc790"/>
+			</line>
+			<staticText>
+				<reportElement x="9" y="0" width="24" height="20" uuid="c98124f0-03d8-45bc-8ca2-04c7df332ac7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="2" width="67" height="20" uuid="9bc40f07-aae3-4de5-8c90-a4375102be80"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Route No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="2" width="67" height="20" uuid="1bd978d1-b1bf-4253-abf3-7b599ab6b7e1"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bus No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="0" width="73" height="20" uuid="74ae8cbe-9d30-4c44-9a5a-c08cb31d97fc"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Start Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="2" width="84" height="20" uuid="6b166a9f-a37f-46bf-bc89-488d2622c3bb"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stop Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="2" width="62" height="20" uuid="052f8c61-fcb9-4fc8-8a83-d27f39a5da93"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="56" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="52" width="555" height="1" uuid="d5de567a-5893-46db-a714-622a61e951de"/>
+			</line>
+			<textField>
+				<reportElement x="8" y="7" width="24" height="20" uuid="d36e6850-4bcc-459f-acb8-8c35bbb0c42f"/>
+				<textFieldExpression><![CDATA[$F{trip_info_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="53" y="7" width="42" height="20" uuid="8f1634a7-1f31-4c61-9221-70a1b9da5292"/>
+				<textFieldExpression><![CDATA[$F{trip_info_route_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="7" width="98" height="20" uuid="0f90cae7-a01e-44d6-8713-efe9cd18fb0f"/>
+				<textFieldExpression><![CDATA[$F{trip_info_bus_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="249" y="7" width="62" height="20" uuid="15e39844-34a2-4722-ba46-feecc4382f7c"/>
+				<textFieldExpression><![CDATA[$F{trip_info_start_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="7" width="67" height="20" uuid="6b368872-deb4-4535-997d-6944c85f7574"/>
+				<textFieldExpression><![CDATA[$F{trip_info_stop_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="462" y="7" width="76" height="20" uuid="130d56fe-ef16-480a-b873-25204e16ed2e"/>
+				<textFieldExpression><![CDATA[$F{trip_info_amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="8" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="31" splitType="Stretch"/>
+	</summary>
+</jasperReport>

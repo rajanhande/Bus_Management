@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d2d6a0bf-3f41-40f8-9337-ccfcb4704621">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     bus_details.`id` AS bus_details_id,
+     bus_details.`bus_no` AS bus_details_bus_no,
+     bus_details.`bus_type` AS bus_details_bus_type,
+     bus_details.`min_charge` AS bus_details_min_charge,
+     bus_details.`seat_no` AS bus_details_seat_no,
+     bus_details.`depot` AS bus_details_depot,
+     bus_details.`child_fare` AS bus_details_child_fare,
+     bus_details.`adult_fare` AS bus_details_adult_fare
+FROM
+     `bus_details` bus_details]]>
+	</queryString>
+	<field name="bus_details_id" class="java.lang.Integer"/>
+	<field name="bus_details_bus_no" class="java.lang.String"/>
+	<field name="bus_details_bus_type" class="java.lang.String"/>
+	<field name="bus_details_min_charge" class="java.lang.Double"/>
+	<field name="bus_details_seat_no" class="java.lang.Integer"/>
+	<field name="bus_details_depot" class="java.lang.String"/>
+	<field name="bus_details_child_fare" class="java.lang.Integer"/>
+	<field name="bus_details_adult_fare" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="211" y="14" width="178" height="31" uuid="fbf7f1b4-b51b-4ff9-b8b1-3f8a88300880"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bus Details Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="3" width="553" height="1" uuid="a4227156-7e81-4f0a-b3e0-ee4b9bf479ce"/>
+			</line>
+			<line>
+				<reportElement x="0" y="56" width="552" height="1" uuid="2df28da5-d8b6-4bab-9d15-5f5838565b4f"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="5" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="49" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="46" width="552" height="1" uuid="3f92af82-c786-43dd-9909-5be3c9582a94"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="2" width="25" height="20" uuid="094a9412-58e6-4015-bab1-ff6776ff4167"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="2" width="66" height="20" uuid="61bed4c8-8755-4d43-b196-5d37a47c1930"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bus NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="2" width="63" height="20" uuid="15fb85a0-7779-4c00-bbd9-9e6a05e334ca"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bus Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="2" width="70" height="20" uuid="b2147825-8490-4d86-8164-b59d2e21dabe"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Min Charge]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="2" width="52" height="20" uuid="40637c72-33a2-4d30-be51-86d876c7729e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Seat NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="2" width="45" height="20" uuid="2d9df281-78ed-4183-9259-ee1f37bbe175"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Depot]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="2" width="76" height="20" uuid="5c030e25-a193-4cd2-80df-e228a18a3896"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Child Fare]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="2" width="69" height="20" uuid="89a8fe07-5bf5-4ba4-9ac5-982e874da72b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adult Fare]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="59" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="56" width="552" height="1" uuid="5c1a964c-c525-46da-8c26-8f3a2472cee5"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="10" width="26" height="20" uuid="559f1b5c-16d6-498e-b595-a85717884f65"/>
+				<textFieldExpression><![CDATA[$F{bus_details_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="38" y="10" width="85" height="20" uuid="f1887d1b-02b0-4b51-b9e1-efb20d873b08"/>
+				<textFieldExpression><![CDATA[$F{bus_details_bus_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="10" width="56" height="20" uuid="22748b13-442e-4848-9727-4b31e219fca7"/>
+				<textFieldExpression><![CDATA[$F{bus_details_bus_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="10" width="70" height="20" uuid="f547a0fa-3a0a-41d3-9898-101e149418c8"/>
+				<textFieldExpression><![CDATA[$F{bus_details_min_charge}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="10" width="36" height="20" uuid="1d3948fb-7071-4cf1-8e5a-4a7f4d609fb2"/>
+				<textFieldExpression><![CDATA[$F{bus_details_seat_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="335" y="10" width="69" height="20" uuid="8407f345-588f-40bf-80ef-4afe1ca94ef1"/>
+				<textFieldExpression><![CDATA[$F{bus_details_depot}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="412" y="10" width="60" height="20" uuid="559e09ba-d69c-4e55-940d-e48ff750b379"/>
+				<textFieldExpression><![CDATA[$F{bus_details_child_fare}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="503" y="10" width="45" height="20" uuid="75b6055c-5139-4721-8010-8a7839329318"/>
+				<textFieldExpression><![CDATA[$F{bus_details_adult_fare}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="5" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
